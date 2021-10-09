@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Smart Desert</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+		<link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script> 
+	<script id="MainScript">
+		
+		const firebaseConfig = {
+			apiKey: "AIzaSyBKUbnCeYoTMV346Li1YkcWy8kr1rsvLa8",
+			authDomain: "intern-f583c.firebaseapp.com",
+			databaseURL: "https://intern-f583c-default-rtdb.firebaseio.com",
+			projectId: "intern-f583c",
+			storageBucket: "intern-f583c.appspot.com",
+			messagingSenderId: "137442147042",
+			appId: "1:137442147042:web:928e989705742ba5e87cbb",
+			measurementId: "G-4SJRMMRCP8"
+		};
+
+		// Initialize Firebase
+		
+		firebase.initializeApp(firebaseConfig);
+		
+		var firebaseref=firebase.database().ref("offers");
+		firebaseref.on("value",function(snapshot){
+			
+			
+			snapshot.forEach(function(element) {
+				console.log(element.val())
+				if(element.val().Navarathri!=undefined){
+					document.querySelector('#offer1').innerHTML+=`${element.val().Navarathri}`
+				    document.querySelector('#description1').innerHTML+=`${element.val().Desc1}`
+				}
+				if(element.val().Diwali!=undefined){
+					document.querySelector('#offer2').innerHTML+=`${element.val().Diwali}`
+				    document.querySelector('#description2').innerHTML+=`${element.val().Desc2}`
+				}
+				if(element.val().Ugadi!=undefined){
+					document.querySelector('#offer3').innerHTML+=`${element.val().Ugadi}`
+				    document.querySelector('#description3').innerHTML+=`${element.val().Desc3}`
+				}
+				if(element.val().Christmas!=undefined){
+					document.querySelector('#offer4').innerHTML+=`${element.val().Christmas}`
+				    document.querySelector('#description4').innerHTML+=`${element.val().Desc4}`
+				}
+				
+			});
+		})
+			
+			
+
+
+	</script>
+		<section class="ftco-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						
+						<div class="head">
+							<h3 id="exam"></h3>
+							<h1 class=" mb-5"><span class="txt--gradient-blue">ADVERTISEMENT</span></h1>
+						</div>
+						
+					</div>
+					<div class="col-md-12">
+						<div class="featured-carousel owl-carousel">
+							<div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url(../smart-desert/images/verne-ho-0LAJfSNa-xQ-unsplash.jpg);"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="desc w-100">
+											<h2 class="mb-4">Building1 <br>Name</h2>
+											<p class="h5">Call: 987654321</p>
+											<p class="h5 mb-4">Email Address: email@info.com</p>
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+													<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+												</div>
+											</div>
+											<p>
+												<div  class="btn btn-outline-dark mb-2 py-3 px-4">01</div>
+												<button type="button" onclick="location='https://roadwayexpress.pythonanywhere.com'" class="btn btn-dark mb-2 py-3 px-4">Register</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url(../smart-desert/images/lance-anderson-QdAAasrZhdk-unsplash.jpg);"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="desc w-100">
+											<h2 class="mb-4">Building2 <br>Name</h2>
+											<p class="h5">Call: 987654321</p>
+											<p class="h5 mb-4">Email Address: email@info.com</p>
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+													<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+												</div>
+											</div>
+											<p>
+												<div  class="btn btn-outline-dark mb-2 py-3 px-4">02</div>
+												<button type="button" onclick="location='https://roadwayexpress.pythonanywhere.com'" class="btn btn-dark mb-2 py-3 px-4">Register</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url(../smart-desert/images/ben-dumond-VedK8_UlmkY-unsplash.jpg);"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="desc w-100">
+											<h2 class="mb-4">Building3 <br>Name</h2>
+											<p class="h5">Call: 987654321</p>
+											<p class="h5 mb-4">Email Address: email@info.com</p>
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+													<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+												</div>
+											</div>
+											<p>
+												<div  class="btn btn-outline-dark mb-2 py-3 px-4">03</div>
+												<button type="button" onclick="location='https://roadwayexpress.pythonanywhere.com'" class="btn btn-dark mb-2 py-3 px-4">Register</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-12">
+						<div class="card-container">
+							<h3> <br>Future Offer on Buildings</h3>
+						</div>
+					</div>
+					
+					<div class="col-md-12">
+						
+						<div class="card-container">
+							<div class="card">
+								<div class="box">
+									<div class="content">
+										<h2>01</h2>
+										
+										<h3 style="color: black;" id="offer1"></h3>
+										<p id="description1" style="font-size: 15px;"></p>
+											
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="box">
+									<div class="content">
+										<h2>02</h2>
+										
+										<h3 style="color: black;" id="offer2"></h3>
+										<p id="description2" style="font-size: 15px;"></p>
+											
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="box">
+									<div class="content">
+										<h2>03</h2>
+										
+										<h3 style="color: black;" id="offer3"></h3>
+										<p id="description3" style="font-size: 15px;"></p>
+											
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="box">
+									<div class="content">
+										<h2>04</h2>
+										
+										<h3 style="color: black;" id="offer4"></h3>
+										<p id="description4" style="font-size: 15px;"></p>
+											
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="bgimg-2">
+							<div class="caption">
+								<div class="glass" id="glass">
+										<div class="row">
+											<div class="col-md-12 form-group">
+											  <h5 style="font-weight: 700;font-size: 35px;color: rgb(18, 93, 143);">Contact Us</h5>										  
+											  </div>
+											</div>
+											<div class="row">
+												<div class="col-md-12 form-group">
+													<div class="icon d-flex align-items-center justify-content-center">
+														<span class="fa fa-map-marker"></span>
+													</div>
+													<div class="text pl-3">
+														<p style="font-size: 20px;color: black;"><span>&nbsp;&nbsp;Address:</span> 198 West 21th Street, Suite <br> 721 New York NY 10016</p>
+													</div>							  
+											  </div>
+										  </div>
+										<div class="row">
+											<div class="col-md-12 form-group">
+												<div class="icon d-flex align-items-center justify-content-center">
+													<span class="fa fa-phone"></span>
+												</div>
+												<div class="text pl-3">
+													<p style="font-size: 20px;color: black;"><span>&nbsp;&nbsp;Phone:</span> <a style="color: black;" href="tel://987456321">+91 987456321</a></p>
+												</div>							  
+										  </div>
+									  </div>
+									  <div class="row">
+										<div class="col-md-12 form-group">
+											<div class="icon d-flex align-items-center justify-content-center">
+												<span class="fa fa-paper-plane"></span>
+											</div>
+											<div class="text pl-3">
+												
+												<p style="font-size: 20px;color: black;"><span>&nbsp;&nbsp;Email:</span> <a style="color: black;" href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+											</div>							  
+									  </div>
+								  </div>
+								  <div class="row">
+									<div class="col-md-12 form-group">
+										<div class="icon d-flex align-items-center justify-content-center">
+											<span class="fa fa-globe"></span>
+										</div>
+										<div class="text pl-3">
+											<p style="font-size: 20px;color: black;">
+												<span>&nbsp;&nbsp;Website</span> <a style="color: black;" href="#">yoursite.com</a></p>
+										</div>							  
+								  </div>
+							  </div>
+										<style>.icon span {
+											font-size: 20px;
+											color: rgb(0, 0, 0);
+											position: relative;
+											right: 190px;
+											top: 28px;
+											white-space: normal;
+											}</style>
+									  
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<button type="submit" onclick="topFunction()"  id="myBtn"><span style='font-size:20px;text-align: center;'>&#8896;</span></button>
+
+					</div>
+				</div>
+			</div>
+
+
+	
+			
+
+			<script>
+				
+				var mybutton = document.getElementById("myBtn");
+				
+				window.onscroll = function() {scrollFunction()};
+				
+				function scrollFunction() {
+				  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					mybutton.style.display = "block";
+				  } else {
+					mybutton.style.display = "none";
+				  }
+				}
+				
+				// When the user clicks on the button, scroll to the top of the document
+				function topFunction() {
+				  document.body.scrollTop = 0;
+				  document.documentElement.scrollTop = 0;
+				}
+				</script>
+				<style>
+					#myBtn {
+						background-color: #33ccff;
+						border: black;
+						position: relative;
+						padding: 15px;
+						text-align: center;
+						text-decoration: none;
+						display: inline-block;
+						font-size: 3px;
+						margin: 15px 170px;
+						cursor: pointer;
+						border-radius: 50%;
+						}
+				</style>
+		</section>
+		
+		
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
